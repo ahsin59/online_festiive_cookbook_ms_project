@@ -1,0 +1,22 @@
+
+{% extends 'base.html'%}
+  {% block content %}
+  
+    
+     
+
+  <p class="heading">{{category_name.category_name}}</p>`  
+  <div class="flex-container">
+    {% for recipe in recipes %}
+      {% if recipe.categories == category_name.category_name %}
+        <a href="{{ url_for('add_recipe', recipe_id=recipe._id) }}">
+          <div class="recipe-card col s12 m6 l3">
+            <h5 class="recipe-title">{{recipe.name}}</h5>
+            <img src="{{recipe.image}}" alt="" class="recipe_image" />
+            <a href="{{url_for('recipe_page', recipe_id=recipe._id)}}" class="waves-effect golden waves-light btn">View Recipe</a>
+          </div>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endblock %}

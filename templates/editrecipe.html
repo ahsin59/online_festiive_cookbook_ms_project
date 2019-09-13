@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if session.username %}
+      <div class="recipe">
+        <div class="form_container">
+          <p class="heading">Edit Recipe</p>
+          <form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="add-recipe">
+            <div class="input-field">
+              <select name="category_name" id="category_name" class="validate category" required="required">
+                <option value="" disabled selected>Category</option>
+                  {% for cat in categories %}
+                    {% if cat.category_name == recipe.category %}
+                      <option value="{{recipe.category}}" selected >{{recipe.category}}</option>
+                    {% else %}
+                      <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+                    {% endif %}
+                  {% endfor %}
+              </select>
+            </div>
+            <div class="add-recipe-fields">
+              <div class="input-field">
+                <input id="icon_prefix" type="text" class="validate" id="name" name="name" value="{{recipe.name}}" required>
+                <label for="icon_prefix">Recipe name</label>
+              </div>
+              <div class="input-field">
+                <input id="icon_prefix" type="text" class="validate" id="cooking" name="cooking" value="{{recipe.cooking_time}}" required>
+                <label for="icon_prefix">Cooking time</label>
+              </div>
+              <div class="input-field">
+                <input id="icon_prefix" type="text" class="validate" id="prep" name="prep" value="{{recipe.prep_time}}" required>
+                <label for="icon_prefix">Preparation time</label>
+              </div>
+              <div class="input-field">
+                <input id="icon_prefix" type="number" min="1" class="validate" id="serves" name="serves" value="{{recipe.serves}}" required>
+                <label for="icon_prefix">Serves</label>
+              </div>
+              <div class="input-field">
+                <input 
+                  id="image"
+                  value="{{recipe.image}}"
+                  name="image" 
+                  type="url" 
+                  class="validate image" 
+                  placeholder="e.g. https://example.com"
+                  pattern="https://.*"
+                  required   
+                >
+                <label for="image">Image (For best results, choose an image with a 4:3 aspect ratio)</label>
+              </div>
+              <div id="field-section">
+                <div id="form-field">
+                  {% for ingredient in recipe.ingredients %}
+                    <div class="input-field">
+                      <input type="text" class="validate" id="ingredient" name="ingredient" value="{{ingredient}}" required/>
+                      <label for="ingredient">Ingredient (e.g. 100g Flour)</label>
+                    </div>
+                  {% endfor %}
+                </div>
+               
+              </div>
+              <div class="input-field">
+                <textarea id="icon_prefix" type="text" class="materialize-textarea" id="method" name="method" required>{{recipe.method}}</textarea>
+                <label for="icon_prefix">Method</label>
+              </div>
+              <div class="input-field">
+                <input id="icon_prefix" type="text" class="validate" id="cuisine" name="cuisine" value="{{recipe.cuisine}}" required>
+                <label for="icon_prefix">Cuisine</label>
+              </div>
+              <div class="input-field">
+                <input disabled value="{{session['username']}}" id="author" name="author" type="text" class="validate">
+                <label for="author_name">Author</label>
+              </div>
+            </div>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Save Changes</button>
+          </form>
+          <a class="btn waves-effect waves-light red action-button" href="{{url_for('loggedin', username=session['username'])}}">Cancel</a>
+        </div>
+      </div>
+    {% else %}
+      <div class="login">
+        <div class="form_container">
+          <header>
+            <p class="heading">You will need to sign in to view this information</p>
+          </header>
+          <a href="{{url_for('login')}}" class="waves-effect orange accent-2 waves-light btn">Login</a>
+        </div>
+      </div>
+    {% endif %}
+{% endblock %}
