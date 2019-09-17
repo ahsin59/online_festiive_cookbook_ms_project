@@ -29,6 +29,9 @@ def index():
     return render_template('index.html',
                            recipes=recipes,
                            categories=categories)
+
+
+
     
 @app.route('/<category_name>', methods=['GET'])
 def filter_list(category_name):
@@ -194,6 +197,49 @@ def update_category(category_id):
         {'category_name': request.form['category_name']})
     return redirect(url_for('categories'))
     
+#-------Cuisines---------
+
+@app.route('/cuisines')
+def cuisines():
+        """Cuisines Page"""
+        return render_template('cuisines.html', cuisines=mongo.db.cuisines.find())
+        
+@app.route('/add_cuisine')
+def add_cuisine():
+        """Add Cuisine Page"""
+        return render_template('add_cuisine.html')
+
+
+@app.route('/insert_cuisine', methods=['POST'])
+def insert_cuisine():
+        """Enable To Add New Cusine And Redirect To Cusines Page"""
+        my_cuisine = {'cuisine_name': request.form.get('cuisine_name')}
+        mongo.db.cuisines.insert_one(my_cuisine)
+        return redirect(url_for('cuisines'))
+
+@app.route('/edit_cuisine/<cuisine_id>')
+def edit_cuisine(cuisine_id):
+        """Enable Edit Cuisine Page"""
+        return render_template('edit_cuisine.html', cuisine=mongo.db.cuisines.find_one({'_id': ObjectId(cuisine_id)}))
+
+
+
+
+@app.route('/update_cuisine/<cuisine_id>', methods=['POST'])
+def update_cuisine(cuisine_id):
+        """Enable To Update Cuisine And Redirect To Cuisines Page""" 
+        cuisines_collection.update(
+            {'_id': ObjectId(cuisine_id)},
+            {'cuisine_name': request.form.get('cuisine_name')})
+        return redirect(url_for('cuisines'))
+
+
+@app.route('/delete_cuisine/<cuisine_id>')
+def delete_cuisine(cuisine_id):
+    cuisines_collection.remove({'_id': ObjectId(cuisine_id)})
+    return redirect(url_for('cuisines'))
+     
+
 
 
 if __name__ == '__main__':
