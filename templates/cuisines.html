@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+    {% if session.username %}
+      <div class="cuisine">
+        <div class="form_container">
+          <div class="heading_container">
+            <h4 class="center-align">Manage cuisines</h4>
+          </div>
+             {% for cuisine in cuisines %}
+              <div class="cuisine_container">
+                <strong>{{cuisine.cuisine_name}}</strong>
+                <div class="button_container">
+                  <a class="btn waves-effect waves-light" href="{{url_for('edit_cuisine', cuisine_id=cuisine._id)}}">Edit</a>
+                  <a class="btn waves-effect waves-light red" href="{{url_for('delete_cuisine', cuisine_id=cuisine._id)}}">Delete</a>
+                </div>
+              </div>
+              <br>
+            {% endfor %}
+          <a class="btn waves-effect waves-light blue action-button" href="{{url_for('add_cuisine')}}">Add CUISINE</a>
+          
+    {% else %}
+      <div class="login">
+        <div class="form_container">
+          <header>
+            <p class="heading">You will need to sign in to view this information</p>
+          </header>
+          <a href="{{url_for('login')}}" class="waves-effect orange accent-2 waves-light btn">Login</a>
+        </div>
+      </div>
+    {% endif %}
+{% endblock %}
+
+
+
