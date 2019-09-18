@@ -84,25 +84,6 @@ the page get user to Manage categories where user can see his edit_category
 will show top of the Manage categories and second picture will show category delete in Manage Category page
 ![Category-Delete2](https://user-images.githubusercontent.com/38302279/65095041-7499f480-d9b7-11e9-8516-ea310e327d24.png)
 * 12th step if user want to add his own cuisine then press Add_cuisine Button
-* ### Manage Cuisine
-![Manage-cuisine](https://user-images.githubusercontent.com/38302279/65095209-2a654300-d9b8-11e9-9c9a-45062cc32e33.png)
-* step 14th when user add the cuisine his own then press add the page get user to Manage cuisine where user can see his 
-own cuisine add in Manage-Cuisine Page.
-### Add_cuisine
-![Add-Cuisine](https://user-images.githubusercontent.com/38302279/65095213-305b2400-d9b8-11e9-8c64-e6f622ee4969.png)
-### Edit_cuisine
-* 13th step if user want to Edit his own cuisine then press Edit_cuisine Button
-![Edit-Cuisine](https://user-images.githubusercontent.com/38302279/65095214-33561480-d9b8-11e9-80f3-5d59f65f8285.png)
-* 16th step when user want to Edit his  own  Cuisine then press Edit button change the cuisine and then pressthe save Change Button
-the page get user to Manage Cuisines where user can see his edit_cuisine
-* 14th step if user want to delete cuisine his own or on the app user need to press delete button cuisine will be delete on
- the Manage cuisine page.
-### delete_cuisine
-![cuisine-delete1](https://user-images.githubusercontent.com/38302279/65095217-394bf580-d9b8-11e9-8c25-8a207c31cb90.png)
-* in this example i show you if user want to delete cuisine name poland you will see this picture poland cuisine
-will show bottom  of the Manage cuisines and second picture will show cuisine delete in Manage cuisine  page
-![cuisine-delete2](https://user-images.githubusercontent.com/38302279/65095221-3b15b900-d9b8-11e9-9f1a-c20b9300a3e7.png)
-
 
 ![Database_Schema_mongo](https://user-images.githubusercontent.com/38302279/65098588-153fe280-d9bf-11e9-91da-46a01f657902.png)
 
@@ -178,10 +159,10 @@ with names of the lists. When hoover over the link color will change. For smalle
 
 ##### Back-End Technologies
 
-* **Flask** - to construct and render templates
+* **Flask 1.0.2** - to construct and render templates
 * **Python 3.6.8** - used as the backend programming language
 * **MongoDB Atlas** - database used to storewebsite backend data
-* **PyMongo 3.8.0** - used for interacting with MongoDB database from Python
+* **PyMongo 2.2.0** - used for interacting with MongoDB database from Python
 * **Jinja** - to display back-end data to the front-end
 * **BSON ObjectId** - allows you to create and parse ObjectIDs without a reference to the MongoDB or bson modules
 
