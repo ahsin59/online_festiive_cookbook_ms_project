@@ -131,13 +131,13 @@ will show bottom  of the Manage cuisines and second picture will show cuisine de
 
 * **Login page** - will allow user to login before using the application
 
-* **
 
 * **Navbar** - created to navigate particular list: (*recipes*, *categories* or *cusines*). Across the navbar the are links
 with names of the lists. When hoover over the link color will change. For smaller devices the navbar collapse*.
 
 * **'Add New Recipe' - button** - when clicked, it will allows the user to add new recipe
 
+* **'Result' when user add recipe then click publish the page automatic redirect to Result Data page
 
 * **'Recipe' - button** - when clicked, will bring to individual recipe page
 
