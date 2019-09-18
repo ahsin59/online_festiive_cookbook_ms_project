@@ -37,7 +37,7 @@ step by step i Demonstrate the user stories  how this application work
 * Ist step of all is Home page in Desktop  Preview  show my App
 ![Home-Desktop](https://user-images.githubusercontent.com/38302279/65088841-c8560f00-d9b2-11e9-9091-a6c18e5c4f8e.png)
 ### wireframes for mobile
-* 2nd  is Home page in Mobile Preview show my App
+* 2nd  is Home page in Mobile Preview show my App 
 ![Home-Mobile](https://user-images.githubusercontent.com/38302279/65088945-1834d600-d9b3-11e9-9daf-edc02e29af55.png)
 ### Singnup
 * 3rd  step user need to signup my app if user want to add his on Recipe,categories and cuisines
@@ -49,7 +49,9 @@ step by step i Demonstrate the user stories  how this application work
 *5th step user want to see the Recipe in apps user can see the Recipes without Login the app 
 ![Recipe](https://user-images.githubusercontent.com/38302279/65095638-f4c15980-d9b9-11e9-9487-279142ff0e6c.png)
 ### Add_Recipe
-* 6th step if user want to addrecipe click the page will  show previw 
+* 6th step if user want to addrecipe click the page will  show previw adad Recipe_category,Recipe_cuisine,Recipe_name
+cooking_time,prep_time,serves and also add Ingridents and Methods and last the user who is Author of Recipe.
+
 ![Add-Recipe](https://user-images.githubusercontent.com/38302279/65090221-26cfbd00-d9b4-11e9-88c6-0bde8aed7c32.png)
 ### Result
 * 7th step after user fill the addrecipe form and press the Publish button the Result page automatically appear on the 
