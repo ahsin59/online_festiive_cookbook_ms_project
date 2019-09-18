@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 users_collection = mongo.db.users
 recipes_collection = mongo.db.recipes
 categories_collection = mongo.db.categories
-festive_cusine= mongo.db.festive_cusine
+
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
