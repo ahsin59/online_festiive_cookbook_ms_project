@@ -32,12 +32,11 @@ also add recipes and manage, add , update and delete categories
 ## WIREFRAMES
 step by step i Demonstrate the user stories  how this application work
 
-
 ### wireframes for desktop
 * Ist step of all is Home page in Desktop  Preview  show my App
 ![Home-Desktop](https://user-images.githubusercontent.com/38302279/65088841-c8560f00-d9b2-11e9-9091-a6c18e5c4f8e.png)
 ### wireframes for mobile
-* 2nd  is Home page in Mobile Preview show my App 
+* 2nd  is Home page in Mobile Preview show my App
 ![Home-Mobile](https://user-images.githubusercontent.com/38302279/65088945-1834d600-d9b3-11e9-9daf-edc02e29af55.png)
 ### Singnup
 * 3rd  step user need to signup my app if user want to add his on Recipe,categories and cuisines
@@ -57,6 +56,15 @@ cooking_time,prep_time,serves and also add Ingridents and Methods and last the u
 * 7th step after user fill the addrecipe form and press the Publish button the Result page automatically appear on the 
 app where can user can edit or delete the recipe Button appear on bottom of  Recipe card
 ![Result-of-Data](https://user-images.githubusercontent.com/38302279/65095897-e9226280-d9ba-11e9-8b0e-effaf0f96c42.png)
+### Edit_Recipe
+if user want to edit his own recipe in Result page recipe will show in Result page recipe data user got two option 
+weather edit_recipe or delete_recipe but in this step user want to edit recipe then user need to click Edit button 
+to get to the edit_recipe page here user can fille the edit_recipe form to make changes in recipes and click SAVE CHANGE 
+button then redirect recipe in Result page where user can see his edit recipe also recipe will show in recipe page 
+![Edit_Recipe](https://user-images.githubusercontent.com/38302279/65178222-2dac0d80-da50-11e9-84dd-213cf84377ab.png)
+### Delete_Recipe
+if user want to delete_recipe just click delete button to delete recipe in database
+![delete_recipe](https://user-images.githubusercontent.com/38302279/65178543-e2dec580-da50-11e9-9617-cacca6ba79c7.png)
 ### Manage Category
 * 8th step if user want to manage categories then click Manage-Categories 
 ![Manage-Categories](https://user-images.githubusercontent.com/38302279/65093222-dad14800-d9b4-11e9-8964-dc8fdf399305.png)
@@ -95,7 +103,7 @@ the page get user to Manage Cuisines where user can see his edit_cuisine
 will show bottom  of the Manage cuisines and second picture will show cuisine delete in Manage cuisine  page
 ![cuisine-delete2](https://user-images.githubusercontent.com/38302279/65095221-3b15b900-d9b8-11e9-9f1a-c20b9300a3e7.png)
 
-## Database Schema
+
 ![Database_Schema_mongo](https://user-images.githubusercontent.com/38302279/65098588-153fe280-d9bf-11e9-91da-46a01f657902.png)
 
 
