@@ -127,21 +127,19 @@ will show bottom  of the Manage cuisines and second picture will show cuisine de
 
 ##### Existing features
 
-* **Register page** - will allow new user to register to get access to the application
+* **Register page** - will allow new user to register to get access to the AddRecipe,Result,Manage Category and Manage Cuisine 
 
 * **Login page** - will allow user to login before using the application
 
-* **'COOK-BOOK' - logo** - when clicked it will always bring the user to the home page
+* **
 
 * **Navbar** - created to navigate particular list: (*recipes*, *categories* or *cusines*). Across the navbar the are links
-with names of the lists. When hoover over the link color will change. For smaller devices the navbar collapse 
-into *burger icon*.
+with names of the lists. When hoover over the link color will change. For smaller devices the navbar collapse*.
 
 * **'Add New Recipe' - button** - when clicked, it will allows the user to add new recipe
 
-* **'Search By Category' - button** - when clicked, it will allows user to search recipes by particular category
 
-* **'View' - button** - when clicked, will bring to individual recipe page
+* **'Recipe' - button** - when clicked, will bring to individual recipe page
 
 * **'Edit Recipe' - button** - allows user to edit particular recipe and make changes
 
