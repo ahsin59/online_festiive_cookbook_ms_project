@@ -4,8 +4,15 @@
 I created an application called ONLINE COOKBOOK that allows user to store and easily access recipes.
 The app is a recipe Festival that will store all your Festive and occasional recipes in one place! It allow the user
 to read recipe, create new recipe, edit and delete them (CRUD).
-As a user you can:
 
+Also my mongodb app.config=["MONGO_URI"] i use orginal string in the mongodb database i was trying to os.getenv('MONGO_URI', 'mongodb://localhost')
+in my project but i was getting error thats why i decied to leave orginal connection string and in the github repo i change 
+the app.config=["MONGO_URI"]os.getenv('MONGO_URI', 'mongodb://localhost') because in gitgub repositery appear the connection
+string whole world can see my password and user name i was trying to slack to get help even watching the Mini project do 
+as they said but still geeting error
+Thats why i want to inform you regarding this issue in my online_festiive_cookbook_ms_project.
+
+As a user you can:
 * view the app on your preferred device (mobile, tablet, desktop)
 * create your own recipe and add to the website
 * edit the recipes
